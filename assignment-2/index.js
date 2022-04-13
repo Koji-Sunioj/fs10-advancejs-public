@@ -1,8 +1,8 @@
 handleError = (response) => {
-  if (response.ok) {
-    return response.json();
-  } else {
+  if (!response.ok) {
     throw new Error("no resource found");
+  } else {
+    return response.json();
   }
 };
 
@@ -29,7 +29,7 @@ class Country {
     const country = fetch(`https://restcountries.com/v2/name/${this.country}`)
       .then((response) => handleError(response))
       .then((data) => {
-        if (data.length == 1 && borders == true) {
+        if (data.length === 1 && borders) {
           data = data[0].borders;
         }
         return data;
