@@ -2,9 +2,10 @@ function runcounter(number) {
   if (number == 1000000) {
     return false;
   } else {
-    setTimeout(() => {
+    const nextInterval = setTimeout(() => {
       number++;
       console.log(number);
+      clearInterval(nextInterval);
       runcounter(number);
     });
   }
