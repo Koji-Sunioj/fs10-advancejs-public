@@ -1,11 +1,13 @@
+let interval;
+
 function runcounter(number) {
-  if (number == 1000000) {
-    return false;
+  if (number === 1000000) {
+    clearInterval(interval);
   } else {
-    const nextInterval = setTimeout(() => {
+    clearInterval(interval);
+    interval = setTimeout(() => {
       number++;
       console.log(number);
-      clearInterval(nextInterval);
       runcounter(number);
     });
   }
