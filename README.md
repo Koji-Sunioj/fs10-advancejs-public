@@ -1,3 +1,8 @@
+note from the developer: 
+
+1. first assignment was a little challenging since i thought i could run a promise, which does a loop thus not blocking the web browser's functionality. however it became apparently that setTimeOut() was the best way to achieve an asynchronous loop
+2. second assignment was achieved by simply creating a class with methods. the methods are run based on the values from the class properties
+
 # Advanced Javascript assignments
 
 ## Assignment 1
